@@ -1,4 +1,5 @@
 # Ignite Lab: Plataforma de Eventos
 
 ## Aula 01 
-- [ ] Instalando o Vite
+- [X] Instalando o Vite
+- [ ] Continuar aula em outro momento parei no minuto 50:00 da aula 01
