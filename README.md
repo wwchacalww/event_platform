@@ -2,4 +2,14 @@
 
 ## Aula 01 
 - [X] Instalando o Vite
-- [ ] Continuar aula em outro momento parei no minuto 50:00 da aula 01
+- [X] Postcss instalado
+- [X] Tailwindcss instalado
+- [X] Graphql instalado
+- [X] Apollo/Client instaldo
+
+## Aula 02 - Componentes
+- [X] Estrutura de pastas
+- [X] Configuração de cores do Tailwind
+- [X] Configuração da fonte Roboto
+- [X] Criação do Header
+- [ ] Criação do Sidebar
