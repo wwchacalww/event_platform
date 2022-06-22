@@ -11,5 +11,9 @@
 - [X] Estrutura de pastas
 - [X] Configuração de cores do Tailwind
 - [X] Configuração da fonte Roboto
-- [X] Criação do Header
-- [ ] Criação do Sidebar
+- [X] Criação do componente Header
+- [X] Criação do componente Sidebar
+- [X] Criação do componente Lesson
+  - [X] Instalação da biblioteca phosphor-react para icones
+  - [X] Consulta com graphql no graphcms
+  - [X] Instalação do date-fns
