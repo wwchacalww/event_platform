@@ -21,3 +21,5 @@
 ## Aula 03 - Video
 - [X] Criação do componente Video
 - [X] Instalação e configuração do @vime/core e @vime/react
+- [X] React-Router-Dom instalado
+- [X] Rota do video com slug e consulta graphql de dados
