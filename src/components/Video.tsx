@@ -7,14 +7,59 @@ import {
 } from "phosphor-react";
 
 import "@vime/core/themes/default.css";
+import { gql, useQuery } from "@apollo/client";
 
-export function Video() {
+interface PropsVideo {
+  lessonSlug: string;
+}
+
+interface GetLessonQueryResponse {
+  lesson: {
+    title: string;
+    description: string;
+    videoId: string;
+    teacher: {
+      name: string;
+      bio: string;
+      avatarURL: string;
+    };
+  };
+}
+
+const GET_LESSON_QUERY = gql`
+  query GetLessonBySlug($slug: String) {
+    lesson(where: { slug: $slug }) {
+      title
+      description
+      videoId
+      teacher {
+        name
+        bio
+        avatarURL
+      }
+    }
+  }
+`;
+
+export function Video(props: PropsVideo) {
+  const { data } = useQuery<GetLessonQueryResponse>(GET_LESSON_QUERY, {
+    variables: {
+      slug: props.lessonSlug,
+    },
+  });
+
+  console.log(data);
+
+  if (!data) {
+    return <div className="flex-1">Carregando...</div>;
+  }
+
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
         <div className="w-full h-full max-w-[1100px] max-h-[60vh] aspect-video">
           <Player>
-            <Youtube videoId="nPzJjMQLwlw" />
+            <Youtube videoId={data.lesson.videoId} />
             <DefaultUi />
           </Player>
         </div>
@@ -23,27 +68,24 @@ export function Video() {
       <div className="p-8 max-w-[1100px] mx-auto">
         <div className="flex items-start gap-16">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold">Aula 01 - Pedindo comida</h1>
+            <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
             <p className="mt-4 text-gray-200 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-              tenetur quo error repellat quisquam commodi inventore, est quos.
-              Molestiae, dolor fugiat unde a esse ea. Optio delectus quos modi
-              dolor!
+              {data.lesson.description}
             </p>
 
             <div className="flex items-center gap-4 mt-6">
               <img
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
-                src="https://github.com/wwchacalww.png"
+                src={data.lesson.teacher.avatarURL}
                 alt="Chacal Cartaxo"
               />
 
               <div className="leading-relaxed">
                 <strong className="font-bold text-2xl block">
-                  Vicente Cartaxo
+                  {data.lesson.teacher.name}
                 </strong>
                 <span className="text-gray-200 text-sm block">
-                  Estressado do Ano
+                  {data.lesson.teacher.bio}
                 </span>
               </div>
             </div>
