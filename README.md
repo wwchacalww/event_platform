@@ -17,3 +17,7 @@
   - [X] Instalação da biblioteca phosphor-react para icones
   - [X] Consulta com graphql no graphcms
   - [X] Instalação do date-fns
+
+## Aula 03 - Video
+- [X] Criação do componente Video
+- [X] Instalação e configuração do @vime/core e @vime/react
