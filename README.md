@@ -23,3 +23,6 @@
 - [X] Instalação e configuração do @vime/core e @vime/react
 - [X] React-Router-Dom instalado
 - [X] Rota do video com slug e consulta graphql de dados
+
+## Aula 04 - Subscribe
+- [ ] Criação da Pagina de inscrição
