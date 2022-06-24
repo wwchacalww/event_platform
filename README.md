@@ -25,4 +25,7 @@
 - [X] Rota do video com slug e consulta graphql de dados
 
 ## Aula 04 - Subscribe
-- [ ] Criação da Pagina de inscrição
+- [X] Criação da Pagina de inscrição
+- [X] Criação do Mutation GraphQl para inscrever novos usuários
+- [X] Estilização das lessons
+- [X] Criação do arquivo .env.local com as variáveis de ambiente VITE_API_URL e VITE_ACCESS_TOKEN para conexão com o graphcms.
