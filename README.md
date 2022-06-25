@@ -29,3 +29,7 @@
 - [X] Criação do Mutation GraphQl para inscrever novos usuários
 - [X] Estilização das lessons
 - [X] Criação do arquivo .env.local com as variáveis de ambiente VITE_API_URL e VITE_ACCESS_TOKEN para conexão com o graphcms.
+
+## Aula 05 - GraphQl Code Gen
+- [X] Instalação do pacote graphql-codegen
+- [ ] Deploy do projeto
